@@ -1,0 +1,87 @@
+{
+  "id": "7f7e1328-1eae-4ce0-b230-535b6c366c25",
+  "version": "2.0",
+  "name": "https://www.sslshopper.com/",
+  "url": "https://www.sslshopper.com",
+  "tests": [{
+    "id": "85968eec-5e8b-40fd-8938-c011d393f86a",
+    "name": "HM01_test_01",
+    "commands": [{
+      "id": "29c9723f-d7f6-41cf-9878-7ebc679afbae",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7073a80c-c4c0-4e06-bf7a-2597603c8f11",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x680",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b44dd80e-bd78-43fc-97da-066715f98ae3",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//h4/a[.='SSL Tools']",
+      "targets": [
+        ["linkText=SSL Tools", "linkText"],
+        ["css=.col-md-3:nth-child(4) h4 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'SSL Tools')]", "xpath:link"],
+        ["xpath=//div[@id='homepage_block_1']/div[3]/div/div[4]/div/h4/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/ssl-certificate-tools.html')])[2]", "xpath:href"],
+        ["xpath=//div[4]/div/h4/a", "xpath:position"],
+        ["xpath=//a[contains(.,'SSL Tools')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "438a9314-db3e-424b-9a65-d01b7d137a8e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=SSL Checker",
+      "targets": [
+        ["linkText=SSL Checker", "linkText"],
+        ["css=td > p > a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'SSL Checker')]", "xpath:link"],
+        ["xpath=//div[@id='main_content_div']/table/tbody/tr/td/p/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'ssl-checker.html')])[2]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'SSL Checker')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f5100609-e90b-4bc8-9c2d-9662bf736cb0",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//div/input[@id=\"hostname\"]",
+      "targets": [],
+      "value": "gb.ru"
+    }, {
+      "id": "229ed6d4-a3cf-472d-ad60-a7bd1ca06983",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div/span/a[@id=\"checkButton\"]",
+      "targets": [
+        ["linkText=SSL Checker", "linkText"],
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'SSL Checker')]", "xpath:link"],
+        ["xpath=//div[@id='main_content_div']/table/tbody/tr/td/p/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'ssl-checker.html')])[2]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'SSL Checker')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "ada681a7-64cf-4541-80d9-2061f9c77fc8",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["85968eec-5e8b-40fd-8938-c011d393f86a"]
+  }],
+  "urls": ["https://www.sslshopper.com/"],
+  "plugins": []
+}
