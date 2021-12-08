@@ -1,0 +1,131 @@
+{
+  "id": "d0844abc-da1e-4bb0-8c1f-f06067e265e5",
+  "version": "2.0",
+  "name": "https://www.rzd.ru/",
+  "url": "https://www.rzd.ru",
+  "tests": [{
+    "id": "17dc102c-124e-42e3-a0c1-062ebdd4206b",
+    "name": "HW01_Test_02",
+    "commands": [{
+      "id": "69380dfb-83c6-4bc1-803e-8636f09749fa",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "126896dc-1bb9-4904-b33e-07c7a1ed7f7b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x680",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "19b2c2d9-c485-46b2-a4b5-a1fd7258dfa0",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div/nav/ul/li/a/span[.='Вход']",
+      "targets": [
+        ["name=j_username", "name"],
+        ["css=.form > .form__groups > .form__groups-inner > .form__group > .form-control", "css:finder"],
+        ["xpath=//input[@name='j_username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "55ff38c8-ca83-440b-9090-63ffc526d6bd",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@name='j_username']",
+      "targets": [
+        ["name=j_username", "name"],
+        ["css=.form > .form__groups > .form__groups-inner > .form__group > .form-control", "css:finder"],
+        ["xpath=//input[@name='j_username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "java_test01"
+    }, {
+      "id": "d3936c52-3e7f-4e55-bdd8-ff115843e087",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@name='j_password']",
+      "targets": [
+        ["name=j_password", "name"],
+        ["css=.form__group > label > .form-control", "css:finder"],
+        ["xpath=//input[@name='j_password']", "xpath:attributes"],
+        ["xpath=//div/div/div/label/input", "xpath:position"]
+      ],
+      "value": "Java0123"
+    }, {
+      "id": "d3f87c04-f9b1-4cb6-bd42-5e68a9b5788a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit']",
+      "targets": [
+        ["css=.login-input_wrap", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb6c5400-b818-4bf6-9ee6-231eed18df49",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div/a[@class=\"j-profile-username\"]",
+      "targets": [
+        ["linkText=JavaJava TestTest", "linkText"],
+        ["css=.j-profile-links-loggedin > .j-profile-username", "css:finder"],
+        ["xpath=//a[contains(text(),'JavaJava TestTest')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/ru/page/5312')]", "xpath:href"],
+        ["xpath=//li[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'JavaJava TestTest')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c5bd540-5471-4d00-9674-2227b2d0d564",
+      "comment": "",
+      "command": "type",
+      "target": "name=lastName",
+      "targets": [
+        ["name=lastName", "name"],
+        ["css=.form__group:nth-child(2) > .valid", "css:finder"],
+        ["xpath=//input[@name='lastName']", "xpath:attributes"],
+        ["xpath=//fieldset/div/label[2]/input", "xpath:position"]
+      ],
+      "value": "TestTest"
+    }, {
+      "id": "2acf8b1b-e098-4c7a-88bd-112ed25c16b2",
+      "comment": "",
+      "command": "type",
+      "target": "name=firstName",
+      "targets": [
+        ["name=firstName", "name"],
+        ["css=.form__group:nth-child(3) > .valid", "css:finder"],
+        ["xpath=//input[@name='firstName']", "xpath:attributes"],
+        ["xpath=//fieldset/div/label[3]/input", "xpath:position"]
+      ],
+      "value": "JavaJava"
+    }, {
+      "id": "57ca9c53-235c-44b3-8692-0e775e240561",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//form/div/button[@class=\"btn-primary\"])[1]",
+      "targets": [
+        ["css=.active .btn-primary", "css:finder"],
+        ["xpath=(//button[@type='submit'])[6]", "xpath:attributes"],
+        ["xpath=//div[3]/form/div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "d32fd0da-de0c-48d5-8f78-9fca34604599",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["17dc102c-124e-42e3-a0c1-062ebdd4206b"]
+  }],
+  "urls": ["https://www.rzd.ru/"],
+  "plugins": []
+}
