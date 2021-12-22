@@ -2,7 +2,7 @@ package com.geekbrains.java3;
 
 import HomeWork4.NotTriangle;
 import HomeWork4.TriangleSquare;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeAll;
 import org.slf4j.LoggerFactory;
 
