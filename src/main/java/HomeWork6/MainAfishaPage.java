@@ -30,5 +30,4 @@ public class MainAfishaPage extends BasePageView {
         loginButton.click();
         return this;
     }
-
 }

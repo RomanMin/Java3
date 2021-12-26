@@ -31,8 +31,7 @@ public class AfishaTest {
         driver.get(AFISHA_BASE_URI);
         new MainAfishaPage(driver).clickCookieButton();
 
-        new MainAfishaPage(driver)
-                .clickLoginButton();
+        new MainAfishaPage(driver).clickLoginButton();
 
         new LoginBlock(driver)
                 .switchToLoginFrame()

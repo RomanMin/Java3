@@ -18,6 +18,7 @@ public class PersonalPageBlock extends BasePageView {
 
     public PersonalPageBlock (WebDriver driver) {
         super(driver);
+
     }
 
     @FindBy(xpath = PERS_PG_BTN)

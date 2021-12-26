@@ -39,7 +39,7 @@ public class LoginBlock extends BasePageView {
     @FindBy(xpath = "//span[.='Войти']")
     WebElement enterButton;
 
-    public LoginBlock clickEnterButton () {
+    public LoginBlock clickEnterButton() {
         enterButton.click();
         return this;
     }
