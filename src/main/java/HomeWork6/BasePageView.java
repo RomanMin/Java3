@@ -14,7 +14,7 @@ public class BasePageView {
 
     public BasePageView(WebDriver driver) {
         this.driver = driver;
-        webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(3));
         actions = new Actions(driver);
         PageFactory.initElements(driver, this);
     }

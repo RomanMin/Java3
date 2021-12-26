@@ -10,8 +10,8 @@ public class LoginBlock extends BasePageView {
     private final static String  LOGIN_BTN_PATH = "//iframe[contains(@src, 'rambler.ru/login')]";
     public LoginBlock(WebDriver driver) {
         super(driver);
-
     }
+
     @FindBy(xpath = LOGIN_BTN_PATH )
     WebElement loginFrame;
 
@@ -42,7 +42,6 @@ public class LoginBlock extends BasePageView {
     public LoginBlock clickEnterButton () {
         enterButton.click();
         return this;
-
     }
 
 }

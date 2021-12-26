@@ -18,7 +18,6 @@ public class PersonalPageBlock extends BasePageView {
 
     public PersonalPageBlock (WebDriver driver) {
         super(driver);
-
     }
 
     @FindBy(xpath = PERS_PG_BTN)
@@ -27,6 +26,7 @@ public class PersonalPageBlock extends BasePageView {
     personalPageButton.click();
         return this;
     }
+
     public PersonalPageBlock hoverPersonalPageBtn() {
         actions.moveToElement(personalPageButton)
                 .build()
@@ -49,6 +49,7 @@ public class PersonalPageBlock extends BasePageView {
         assertThat(checkedWords, isDisplayed());
         return this;
     }
+
     @FindBy(xpath = EXIT_BTN)
     private WebElement exitButton;
     public PersonalPageBlock exitButtonClick() {

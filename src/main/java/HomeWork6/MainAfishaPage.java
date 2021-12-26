@@ -21,7 +21,6 @@ public class MainAfishaPage extends BasePageView {
                 .visibilityOfElementLocated(By.xpath(COOKIE_BTN)));
         cookieButton.click();
         return this;
-
     }
 
     @FindBy(xpath = "//button[.='Войти']")
@@ -30,7 +29,6 @@ public class MainAfishaPage extends BasePageView {
     public  MainAfishaPage clickLoginButton(){
         loginButton.click();
         return this;
-
     }
 
 }

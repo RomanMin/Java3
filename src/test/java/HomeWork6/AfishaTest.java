@@ -54,8 +54,7 @@ public class AfishaTest {
     public void logOutTest()  throws Exception {
         new PersonalPageBlock(driver).hoverPersonalPageBtn();
         Thread.sleep(2000);
-        new PersonalPageBlock(driver)
-                .exitButtonClick();
+        new PersonalPageBlock(driver).exitButtonClick();
         Thread.sleep(2000);
         assertThat(driver.findElement(By.xpath("//button[.='Войти']")),
                 isDisplayed());
