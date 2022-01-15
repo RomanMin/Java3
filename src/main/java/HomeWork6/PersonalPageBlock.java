@@ -1,6 +1,7 @@
 package HomeWork6;
 
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,11 +24,14 @@ public class PersonalPageBlock extends BasePageView {
 
     @FindBy(xpath = PERS_PG_BTN)
     WebElement personalPageButton;
+
+    @Step("Переходим на персональную страницу")
     public PersonalPageBlock enterPersonalPage() {
     personalPageButton.click();
         return this;
     }
 
+    @Step("Наводим курсор на кнопку персональной страницы")
     public PersonalPageBlock hoverPersonalPageBtn() {
         actions.moveToElement(personalPageButton)
                 .build()
@@ -37,6 +41,8 @@ public class PersonalPageBlock extends BasePageView {
 
     @FindBy(xpath = FAVORITES_SECTION)
     WebElement favoritesButton;
+
+    @Step("переходим на вкладку избранное")
     public PersonalPageBlock switchToFavorites() {
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(FAVORITES_SECTION)));
         favoritesButton.click();
@@ -45,6 +51,8 @@ public class PersonalPageBlock extends BasePageView {
 
     @FindBy(xpath = CHECKED_ELEMENT)
     private WebElement checkedWords;
+
+    @Step("Проверяем избранное")
     public PersonalPageBlock checkFavorites() {
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(CHECKED_ELEMENT)));
         assertThat(checkedWords, isDisplayed());
@@ -53,6 +61,8 @@ public class PersonalPageBlock extends BasePageView {
 
     @FindBy(xpath = EXIT_BTN)
     private WebElement exitButton;
+
+    @Step("Нажимаем кнопку ВЫХОД")
     public PersonalPageBlock exitButtonClick() {
         exitButton.click();
         return this;

@@ -1,6 +1,7 @@
 package HomeWorck5;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -16,7 +17,7 @@ import java.time.Duration;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static ru.yandex.qatools.htmlelements.matchers.WebElementMatchers.isDisplayed;
-
+   @Story("Афиша")
 public class AfishaTest {
 
     WebDriver driver;
@@ -39,7 +40,10 @@ public class AfishaTest {
         driver.findElement(By.xpath("//button[.='ОК']")).click();
         logIn();
     }
-    @Test //переходим в "избранное" и проверяем что в избранном ничего нет
+    @Test
+    @Description("переходим в избранное и проверяем что в избранном ничего нет")
+    @TmsLink("001")
+    @Feature("Избранное")
     public void emptyFavoritesTest()  throws Exception{
         driver.findElement(By.xpath("//div/a[contains(@href, 'personalpage')]")).click();
         Thread.sleep(1000);
@@ -49,11 +53,15 @@ public class AfishaTest {
              isDisplayed());
     }
 
-    @Test //нажимаем в выпадающем меню кнопку "Выход" и проверяем что появилась кнопка "Вход"
+    @Test
+    @Description ("нажимаем в выпадающем меню кнопку Выход и проверяем что появилась кнопка Вход")
+    @TmsLink("002")
+    @Feature("Выход")
     public void logOutTest()  throws Exception {
-        actions.moveToElement(driver.findElement(By.xpath("//div/a[contains(@href, 'personalpage')]")))
+        actions.moveToElement(driver.findElement(By.xpath("//div/a[contains(@href, 'personalpage/5074063')]")))
             .build()
             .perform();
+        Thread.sleep(1000);
         driver.findElement(By.xpath("//div[text()=\"Выход\"]")).click();
         Thread.sleep(1000);
         assertThat(driver.findElement(By.xpath("//button[.='Войти']")),
@@ -71,7 +79,8 @@ public class AfishaTest {
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.id("login")));
         driver.findElement(By.xpath("//input[@id=\"login\"]")).sendKeys("test@m-rv.ru");
         driver.findElement(By.xpath("//input[@id=\"password\"]")).sendKeys("JavaTest01");
+        Thread.sleep(1000);
         driver.findElement(By.xpath("//span[.='Войти']")).click();
-        Thread.sleep(30000);// Вводим капчу
+        Thread.sleep(10000);// Вводим капчу
     }
 }

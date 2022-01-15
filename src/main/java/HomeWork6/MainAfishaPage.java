@@ -1,5 +1,6 @@
 package HomeWork6;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,7 +16,7 @@ public class MainAfishaPage extends BasePageView {
 
     @FindBy(xpath =COOKIE_BTN)
     WebElement cookieButton;
-
+    @Step("Нажимаем кнопку ОК на поп-ап сообщении")
     public MainAfishaPage clickCookieButton(){
         webDriverWait.until(ExpectedConditions
                 .visibilityOfElementLocated(By.xpath(COOKIE_BTN)));
@@ -25,7 +26,7 @@ public class MainAfishaPage extends BasePageView {
 
     @FindBy(xpath = "//button[.='Войти']")
     WebElement loginButton;
-
+    @Step("Нажимаем кнопку ВОЙТИ")
     public  MainAfishaPage clickLoginButton(){
         loginButton.click();
         return this;
