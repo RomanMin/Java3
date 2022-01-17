@@ -33,7 +33,7 @@ public class SslCheckerTest {
         webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(5));
         driver.get(SSL_BASE_URI);
     }
-    @Test
+    @Test //проверяем что в результате проверки сайта открылась страница с результатами
     public void sslSiteTest() {
         checkSite();
 

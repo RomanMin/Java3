@@ -2,7 +2,6 @@ package HomeWorck5;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.containsString;
 import static ru.yandex.qatools.htmlelements.matchers.WebElementMatchers.isDisplayed;
 
 import org.junit.jupiter.api.*;
@@ -30,7 +29,7 @@ public class RzdSiteTest {
         driver.get(RZD_BASE_URI);
         driver.findElement(By.xpath("//div/button[.='Принять']")).click();
     }
-    @Test
+    @Test //Проверяем что после внесения изменений появилось сообщение об успешном обновлении данных
     public void sslSiteTest() {
         checkChangesAccepted();
 
